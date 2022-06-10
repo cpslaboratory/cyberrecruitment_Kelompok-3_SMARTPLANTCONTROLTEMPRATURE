@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://kit.fontawesome.com/77fa727d74.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+    <title>SMART PLANT TEMPERATURE CONTROL</title>
+    <link rel="icon" type="image/x-icon" href="tumbuhankopilogo.jpg">
+  </head>
+  <body>
+    <section class="sec">
+      <div class="toggle" onclick="darkmode()"><span class="darklight">Dark</span></div>
+      <div class="head">
+        <h1><span class="auto-input">SMART PLANT TEMPERATURE CONTROL</span></h1>
+      </div>
+      <div class="margin-top">
+        <div class="card">
+          <div class="content">
+            <div class="card-text">
+              <h4>Suhu</h4>
+              <div class="card-image">
+                <div class="icon">
+                  <i class="fa-solid fa-temperature-half"></i>
+                </div>
+              </div>
+              <div class="value">
+                <h4 id="suhu">--</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <div class="card-text">
+            <h4>Kelembaban</h4>
+            <div class="card-image">
+              <div class="icon">
+                <i class="fa-solid fa-water"></i>
+              </div>
+            </div>
+            <div class="value">
+              <h4 id="kelembaban">--</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <div class="card-text">
+            <h4>Lampu</h4>
+            <div class="card-image">
+              <div class="icon">
+                <i class="fa-regular fa-lightbulb"></i>
+              </div>
+            </div>
+            <div class="value">
+              <h4 id="lampu">--</h4>
+            </div>
+            <div class="slide">
+              <label class="switch">
+                <input type="checkbox" id="switchlampu" onchange="nilailampu(this.checked)" />
+                <span class="slider round"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="margin-bottom">
+        <div class="card">
+          <div class="content">
+            <div class="card-text">
+              <h4>Kipas</h4>
+              <!-- <i class="fa-brands fa-instagram"></i> -->
+              <div class="card-image">
+                <div class="icon">
+                  <i class="fa-solid fa-fan"></i>
+                </div>
+              </div>
+              <div class="value">
+                <h4 id="kipas">--</h4>
+              </div>
+              <div class="slide">
+                <label class="switch">
+                  <input type="checkbox" id="switchkipas" onchange="nilaikipas(this.checked)" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+section {
+  position: relative;
+  background: linear-gradient(315deg, #ffffff, 0%, #d7e1ec 74%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.5s;
+}
+
+section.dark {
+  background: #24292d;
+}
+
+
+section .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 300px;
+  height: 410px;
+  background: #fff;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  margin: 20px;
+  transition: background 0.5s;
+}
+
+section.dark .card {
+  background: #323840;
+}
+
+section .card .content,
+section .card .card-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+section .card .card-text .card-image {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  background: linear-gradient(315deg, #ffffff, 0%, #d7e1ec 74%);
+}
+
+section.dark .card .card-text .card-image {
+  transition: all 0.3s ease-out;
+  background: #24292d;
+}
+
+section .card .card-text .card-image .icon {
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  box-sizing: border-box;
+  height: 120px;
+  width: 120px;
+  line-height: 120px;
+  font-size: 50px;
+}
+
+section .card .card-text h4 {
+  font-weight: 700;
+  width: 200px;
+  height: 30px;
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 30px;
+}
+
+section .card .card-text .value {
+  margin-top: 30px;
+  font-size: 30px;
+}
+
+section .card .card-text ul {
+  margin-bottom: 20px;
+}
+
+section.dark .card .card-text {
+  color: #ccc;
+}
+
+section .card .button {
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  margin: 0 5px;
+  background: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 1px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-out;
+  overflow: hidden;
+}
+
+section.dark .card .button {
+  background: #404852;
+  color: #fff;
+}
+
+section .card .button .icon {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  text-align: center;
+  box-sizing: border-box;
+  line-height: 40px;
+}
+
+section .card .button:hover {
+  width: 150px;
+}
+
+section .card .button:hover .icon {
+  background: #e1306c;
+  transition: all 0.3s ease-out;
+  color: #fff;
+}
+
+section .card .content a {
+  list-style-type: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+section .card .button .icon i {
+  font-size: 25px;
+  line-height: 40px;
+}
+
+section .card .button span {
+  font-weight: 500;
+  margin-left: 5px;
+  transition: all 0.3s ease-out;
+}
+
+section .toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #e9f5ff;
+  width: 100px;
+  height: 40px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+section.dark .toggle {
+  background: #404852;
+  color: white;
+}
+
+.toggle:before {
+  content: "\f186";
+  font-family: fontAwesome;
+}
+
+section.dark .toggle:before {
+  content: "\f185";
+  color: #fff;
+}
+
+section .toggle .darklight {
+  margin-left: 10px;
+  user-select: none;
+}
+
+section .head {
+  position: absolute;
+  top: 50px;
+  width: 800px;
+  height: 60px;
+  font-size: 25px;
+  text-align: center;
+}
+
+section.dark .head {
+  color: #ccc;
+}
+
+@media screen and (max-width: 1020px) {
+  section {
+    align-content: space-between;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+  section .margin-top {
+    margin-top: 300px;
+  }
+
+  section .margin-bottom {
+    margin-bottom: 100px;
+  }
+
+  section .toggle {
+    position: absolute;
+    top: 240px;
+    bottom: 0;
+    right: auto;
+  }
+
+  section .head {
+    width: 300px;
+    height: 150px;
+  }
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
